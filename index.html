@@ -130,6 +130,15 @@
 
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111702043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 
@@ -262,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://willyli.github.io/20171227/如何用HEXO-打造網誌/">
+    <link itemprop="mainEntityOfPage" href="https://willyli.github.io/20171227/hexo01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Willy Li">
@@ -281,7 +290,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/20171227/如何用HEXO-打造網誌/" itemprop="url">如何用 HEXO 打造網誌</a></h1>
+                <a class="post-title-link" href="/20171227/hexo01/" itemprop="url">用 HEXO 打造網誌(1) - 建置環境</a></h1>
         
 
         <div class="post-meta">
@@ -334,9 +343,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/20171227/如何用HEXO-打造網誌/#comments" itemprop="discussionUrl">
+                <a href="/20171227/hexo01/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="20171227/如何用HEXO-打造網誌/" itemprop="commentCount"></span>
+                        data-disqus-identifier="20171227/hexo01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -366,7 +375,49 @@
       
         
           
-            <h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="Hexo111"><a href="#Hexo111" class="headerlink" title="Hexo111"></a>Hexo111</h2>
+            <p><img src="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png" alt="HEXO"></p>
+<h1><span id="前言">前言</span></h1><p>市面上有許多免費部落格，ex: <a href="https://www.blogger.com/" target="_blank" rel="noopener">blogger</a>、<a href="https://www.pixnet.net/blog" target="_blank" rel="noopener">痞客邦</a>、<a href="http://blog.xuite.net/" target="_blank" rel="noopener">隨意窩日誌Xuite</a>，但總歸一句就不是自己的站台。但為了撰寫部落格而架設資料庫與後台系統，似乎又殺雞焉用牛刀，這種做法的平台可參考<a href="https://zh-tw.wordpress.com/learn-more/?v=blog" target="_blank" rel="noopener">WordPress</a>、<a href="https://www.wix.com" target="_blank" rel="noopener">Wix</a>、<a href="https://www.weebly.com/?lang=zh_TW" target="_blank" rel="noopener">Weebly</a>。</p>
+<p>部落格基本上都是靜態HTML，因此許多開發者便利用後端語法開發了blog framework，簡易了製作部落格產生靜態網頁(static page)的流程，優點為環境要求低、維護簡單、靈活多變，基本上使用起來就像是gulp/webpack等前端自動化工具，使用markdown語法撰寫網誌編排容易，跟傳統html編輯器比較起來簡潔，較為知名的框架如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>語言</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hexo</td>
+<td>NodeJS</td>
+</tr>
+<tr>
+<td>Jekyll</td>
+<td>Ruby</td>
+</tr>
+<tr>
+<td>OctoPress</td>
+<td>Ruby</td>
+</tr>
+<tr>
+<td>Sculpin</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td>Hugo</td>
+<td>GO</td>
+</tr>
+</tbody>
+</table>
+<p>為何選用HEXO，第一是NodeJS，對javascript掌握度比較高，第二是因為檔案建立速度比較快，(相較於ruby語法)，最後是因為，HEXO是台灣人寫的，文件都有中文，非常的友善呀！(<a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="noopener">HEXO作者的自我推薦</a>)</p>
+<hr>
+<h1><span id="step1-建置環境">STEP1 - 建置環境</span></h1><blockquote class="blockquote-center">blah blah blah</blockquote>
+
+<hr>
+<h1><span id="step2-github配置">STEP2 - Github配置</span></h1><hr>
+<h1><span id="step3-建立第一篇文章">STEP3 - 建立第一篇文章</span></h1><hr>
+<h1><span id="step4-發布到github">STEP4 - 發布到Github</span></h1><hr>
+<h1><span id="常用-hexo-指令">常用 Hexo 指令</span></h1><hr>
+<h1><span id="reference">Reference</span></h1>
           
         
       
@@ -473,7 +524,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -685,7 +736,7 @@
   
 
     
-      <script id="dsq-count-scr" src="https://willyli.disqus.com/count.js" async></script>
+      <script id="dsq-count-scr" src="https://https-willyli-github-io.disqus.com/count.js" async></script>
     
 
     
