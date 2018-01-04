@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,前端,NodeJS,NexT," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Willy's Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本文在討論Hexo的主題配置，並使用本站選用的NexT當作範例，還包含不少擴充功能，如評論功能、TOC功能、sitemap、google analysis等等，也會教你如何去微調一些layout，讓你的Hexo部落格錦上添花。">
+<meta name="keywords" content="Hexo,前端,NodeJS,NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 HEXO 打造網誌教學(2) - 主題配置">
+<meta property="og:url" content="https://willyli.github.io/20180102/hexo02/index.html">
+<meta property="og:site_name" content="Willy&#39;s Notes">
+<meta property="og:description" content="本文在討論Hexo的主題配置，並使用本站選用的NexT當作範例，還包含不少擴充功能，如評論功能、TOC功能、sitemap、google analysis等等，也會教你如何去微調一些layout，讓你的Hexo部落格錦上添花。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png">
+<meta property="og:updated_time" content="2018-01-04T16:34:43.985Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用 HEXO 打造網誌教學(2) - 主題配置">
+<meta name="twitter:description" content="本文在討論Hexo的主題配置，並使用本站選用的NexT當作範例，還包含不少擴充功能，如評論功能、TOC功能、sitemap、google analysis等等，也會教你如何去微調一些layout，讓你的Hexo部落格錦上添花。">
+<meta name="twitter:image" content="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://willyli.github.io/20180102/hexo02/"/>
+
+
+
+
+
+  <title>用 HEXO 打造網誌教學(2) - 主題配置 | Willy's Notes</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111702043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Willy's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Front-End Developer</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://willyli.github.io/20180102/hexo02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Willy Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Willy's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">用 HEXO 打造網誌教學(2) - 主題配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-02T23:41:12+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HEXO/" itemprop="url" rel="index">
+                    <span itemprop="name">HEXO</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/20180102/hexo02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="20180102/hexo02/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+      
+      
+      
+        <p><img src="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png" alt="HEXO"></p>
+<p>本文在討論Hexo的主題配置，並使用本站選用的NexT當作範例，還包含不少擴充功能，如評論功能、TOC功能、sitemap、google analysis等等，也會教你如何去微調一些layout，讓你的Hexo部落格錦上添花。<br><a id="more"></a></p>
+<h2 id="網站配置"><a href="#網站配置" class="headerlink" title="網站配置"></a>網站配置</h2><h3 id="基礎設定"><a href="#基礎設定" class="headerlink" title="基礎設定"></a>基礎設定</h3><p>根目錄底下的 <code>_config.yml</code>檔案可以修改網站配置，此檔案的任何更動都需要重啟server才能生效。</p>
+<ul>
+<li>Site (有些跟SEO相關)<ol>
+<li>title: 網站標題 (<code>&lt;title&gt;</code>)</li>
+<li>subtitle: 網站副標題 </li>
+<li>description: 網站描述 (<code>&lt;description&gt;</code>)</li>
+<li>author: 您的名字 (<code>&lt;author&gt;</code>)</li>
+<li>language: 網站使用的語言 (<code>&lt;html lang=&quot;&quot;&gt;</code>)</li>
+<li>timezone: 網站時區，Hexo 預設使用您電腦的時區</li>
+</ol>
+</li>
+<li>URL<ol>
+<li>url：網站的網址    </li>
+<li>root：網站的根目錄    </li>
+<li>permalink：文章 永久連結 的格式(預設值 :year/:month/:day/:title/)</li>
+<li>permalink_defaults：permalink 中各區段的預設值    </li>
+</ol>
+</li>
+<li>剩下的後面會提到</li>
+</ul>
+<hr>
+<h2 id="安裝主題-NexT"><a href="#安裝主題-NexT" class="headerlink" title="安裝主題(NexT)"></a>安裝主題(NexT)</h2><p>主題，Hexo提供開發者自行設計樣式，整個layout到css都可以依照需求客製化。參考比較多人使用，說明文件也有中文化，因此使<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>主題，此外在許多客製化的需求都已經被考慮到，例如social media link、table of content的樣式也讓人滿意，也提供多個scheme可以變換，擴充性也非常好。</p>
+<h3 id="基本安裝"><a href="#基本安裝" class="headerlink" title="基本安裝"></a>基本安裝</h3><p>基本上安裝非常簡單，就是下載下來放在<code>/themes</code>目錄底下，可以選擇<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">clone最新版本</a>，或是<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">下載穩定版本</a>使用。</p>
+<p>你可以看到<code>/themes</code>目錄底下已經有了預設的landscape主題，意味著你可以下載多個主題做替換，真正deploy的主題會根據你在根目錄的<code>_config.yml</code>文件中 #Extensions &gt; theme 決定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">theme: next #使用你themes底下資料夾名稱</span><br></pre></td></tr></table></figure>
+<h3 id="選擇Scheme"><a href="#選擇Scheme" class="headerlink" title="選擇Scheme"></a>選擇Scheme</h3><p>Scheme指的是方案，意思是這個主題底下有多種配置方案可以選擇，端看主題的設計者如何規劃。</p>
+<p>選擇scheme必須要到<code>/themes/next/_config.yml</code>文件裡面設定，這裡稍微解釋一下，根目錄底下有個<code>_config.yml</code>，這是 <strong>網站配置文件</strong> ，這是Hexo框架的設定檔；每個theme底下也都有<code>_config.yml</code>，這支檔案為 <strong>主題配置文件</strong> ，跟主題樣式相關的都在這裡設定。值得注意一點，先前提到<strong>網站配置文件</strong>的更動需要重啟server(hexo s)才能看到變化，但<strong>主題配置文件</strong>作任何更動，只要重新整理，就能看到變化。</p>
+<p><code>.yml</code>文件中 #表示此行註解，你可以看到<code>v5.1.3</code>底下有4種scheme可以選擇，你只需要把你選擇的scheme註解移除，就能使用此scheme，建議每種都試看看，找到你最喜歡的scheme。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure></p>
+<h3 id="增加個人資料"><a href="#增加個人資料" class="headerlink" title="增加個人資料"></a>增加個人資料</h3><h4 id="大頭貼-avatar"><a href="#大頭貼-avatar" class="headerlink" title="大頭貼 avatar"></a>大頭貼 avatar</h4><p>設定大頭貼叫avatar真的滿幽默的，其實avatar也有化身的意思，設定avatar請在<code>/themes/next/_config.yml</code>找到下面的配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /images/avatar.jpg</span><br></pre></td></tr></table></figure></p>
+<p>這裡可以講一下網站所有的圖片連結，絕對路徑沒什麼問題，相對路徑我習慣用/抓根目錄，我在source裡面放了一個<code>images</code>資料夾，裡面再分各個主題的圖片資料夾。</p>
+<h4 id="Social-Media-Link"><a href="#Social-Media-Link" class="headerlink" title="Social Media Link"></a>Social Media Link</h4><p>你可以在<code>/themes/next/_config.yml</code>找到下面的social配置，把要用的取消註解，他就會出現在你的overview裡面，<code>||</code>後面的字串代表的是<a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a>的icon，NexT內建fa的標籤，你可以在<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">ICON列表</a>中找到相符的Icon名稱。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname || github</span><br><span class="line">  E-Mail: mailto:yourEmail || envelope</span><br><span class="line">  Codepen: https://codepen.io/yourname/ || codepen</span><br><span class="line">  resume: /cv.pdf || file-pdf-o </span><br><span class="line">  #Twitter: https://twitter.com/yourname || twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || facebook</span><br><span class="line">  #VK Group: https://vk.com/yourname || vk</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || skype</span><br></pre></td></tr></table></figure></p>
+<p>你也可以自行新增，像我就有把resume跟Codepen放上去，所以我也找了相符的Icon。</p>
+<h3 id="首頁摘要-auto-excerpt"><a href="#首頁摘要-auto-excerpt" class="headerlink" title="首頁摘要 auto_excerpt"></a>首頁摘要 auto_excerpt</h3><p>auto_excerpt，意思就是自動在首頁的時候幫你擷取摘要，若沒有使用這個功能，在首頁的部分就會將所有文章內容呈現，啟用之後就會出現read more的button。這部分，我研究了一些時間，先說最基礎的設定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true #使用與否</span><br><span class="line">  length: 300 #摘要的字數</span><br></pre></td></tr></table></figure></p>
+<p>可以從作者的註解看到他是不建議使用auto_excerpt的。原因是呈現的文字將是沒有經過渲染的純文字，再者摘要的內容也不會是完全你希望讀者看到的內容，常常會有程式碼被截斷，或是英文字截斷的問題。所以這裡就要用到<code>&lt;!-- more --&gt;</code>，在你希望摘要結束的位置後面加上<code>&lt;!-- more --&gt;</code>，就不會管你設定的length是多少了。</p>
+<p>因此我選擇開啟這個功能，並且在每篇文章的最前面加上我希望被看到的摘要內容，再加上<code>&lt;!-- more --&gt;</code>，當作前言，再開始文章的內容，這樣就能確保我的首頁是好看的。</p>
+<p>若使用摘要功能就不會有圖片，但要吸引讀者閱讀，有圖片必然會增加點擊率，所以接下來就是要解決沒有圖片的問題。<br>請找到<code>themes/next/layout/_macro/post.swig</code>，並把下面有加+的行數加在該位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> &#123;% if is_index %&#125;</span><br><span class="line">    &#123;% if post.description and theme.excerpt_description %&#125;</span><br><span class="line">    &#123;&#123; post.description &#125;&#125;</span><br><span class="line">    &lt;!--noindex--&gt;</span><br><span class="line">    &lt;div class=&quot;post-button text-center&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;btn&quot; href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot;&gt;</span><br><span class="line">        &#123;&#123; __(&apos;post.read_more&apos;) &#125;&#125; &amp;raquo;</span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!--/noindex--&gt;</span><br><span class="line">    &#123;% elif post.excerpt  %&#125;</span><br><span class="line">    &#123;&#123; post.excerpt &#125;&#125;</span><br><span class="line">    &lt;!--noindex--&gt;</span><br><span class="line">    &lt;div class=&quot;post-button text-center&quot;&gt;</span><br><span class="line">        &lt;a class=&quot;btn&quot; href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&#123;% if theme.scroll_to_more %&#125;#&#123;&#123; __(&apos;post.more&apos;) &#125;&#125;&#123;% endif %&#125;&quot; rel=&quot;contents&quot;&gt;</span><br><span class="line">        &#123;&#123; __(&apos;post.read_more&apos;) &#125;&#125; &amp;raquo;</span><br><span class="line">        &lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!--/noindex--&gt;</span><br><span class="line">    &#123;% elif theme.auto_excerpt.enable %&#125;</span><br><span class="line">+   &#123;% if post.image %&#125;</span><br><span class="line">+       &lt;div class=&quot;out-img-topic&quot;&gt;</span><br><span class="line">+          &lt;img src=&#123;&#123; post.image &#125;&#125; class=&quot;img-topic&quot; /&gt;</span><br><span class="line">+       &lt;/div&gt;</span><br><span class="line">+   &#123;% endif %&#125;</span><br><span class="line">    &#123;% set content = post.content | striptags %&#125;</span><br><span class="line">          &#123;&#123; content.substring(0, theme.auto_excerpt.length) &#125;&#125;</span><br><span class="line">          &#123;% if content.length &gt; theme.auto_excerpt.length %&#125;...&#123;% endif %&#125;</span><br><span class="line">          &lt;!--noindex--&gt;</span><br></pre></td></tr></table></figure>
+<p>並且在你要加上縮圖的文章檔案的最前面加上image:url。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章標題</span><br><span class="line">date: 2018-01-01 00:00:00</span><br><span class="line">image: image url</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>如此一來就可以在首頁看到你想要放的文章縮圖，若無縮圖就不要加上這個屬性即可。<br>這裡提到了<code>themes/next/layout/</code>，這個資料夾底下放著Hexo+NexT如何將markdown文件渲染成html的template，看似很複雜，其實只要找到想微調的部分，看看他的語法邏輯，就能在html上加上一些class或是一些html tags，這裡我就是加上了一個<code>&lt;img/&gt;</code>。</p>
+<h3 id="自訂css"><a href="#自訂css" class="headerlink" title="自訂css"></a>自訂css</h3><p>我很喜歡next的地方是，他把有把開發者的擴充需求跟他本身開發的原始碼做分離，在css的部分，請把你新增的內容加在<code>themes/next/source/css/_custom/custom.styl</code>檔案裡面，這裡的撰寫方法是<a href="http://stylus-lang.com/" target="_blank" rel="noopener"><strong>stylus</strong></a>，其實跟sass大同小異，選擇用<code>stylus</code>的原因是sass/less都依賴<code>ruby</code>，對於一個純nodejs撰寫的框架，自然是選擇stylus。</p>
+<p>由於這個框架有使用<a href="http://fancyapps.com/fancybox/" target="_blank" rel="noopener">fancybox v2</a>，之前就常用，所以我加上一些css動畫當作範例，你可以點文章開頭的圖片<a href="#posts">測試看看</a>。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fancybox-wrap</span><span class="selector-class">.fancybox-opened</span> </span><br><span class="line">    <span class="attribute">transform</span>: scale(<span class="number">1</span>)</span><br><span class="line">.fancybox-wrap</span><br><span class="line">    <span class="attribute">transform</span>: scale(<span class="number">0</span>)</span><br><span class="line">    <span class="attribute">transition</span>: transform <span class="number">0.2s</span> ease;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="加入其他功能"><a href="#加入其他功能" class="headerlink" title="加入其他功能"></a>加入其他功能</h2><h3 id="留言-DISQUS"><a href="#留言-DISQUS" class="headerlink" title="留言(DISQUS)"></a>留言(DISQUS)</h3><p><a href="https://disqus.com/" target="_blank" rel="noopener">DISQUS</a>提供免費的網路留言服務，使用者也非常多，註冊也非常容易，你可以在<code>/themes/next/_config.yml</code>找到下面的DISQUS配置，enable改成true，並輸入shortName即可。<br>註冊完後，新增一個網站，並輸入website url(你網站的上線網址)，你可以在admin裡的general找到shortname，這裡補充一下，Comment Policy URL非必要，這裡指的是你針對你網站上面的comments有什麼規範，寫在一個網頁上必且給他連結。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname: yourShortname</span><br><span class="line">  count: true</span><br></pre></td></tr></table></figure></p>
+<p>話說因為NexT的作者是中國人，因此他也內建了許多如暢言、百度分享、youyan……的功能，也有提供<a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">gitment</a>的功能，這是用github issue為來源的評論。</p>
+<p>此外，若你的文章不想要有comments，你可以在文章的頭，也就是下面的範例，設定<code>comments:false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: title</span><br><span class="line">date: 2017-12-31 00:00:00</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure>
+<h3 id="TOC-Table-Of-Contents"><a href="#TOC-Table-Of-Contents" class="headerlink" title="TOC (Table Of Contents)"></a>TOC (Table Of Contents)</h3><p>TOC就是你在左邊看到的table of contents，這是一個好用的功能，因為可以用它來審視你的文章結構，幫助你寫作更有架構，此外你也可以讓讀者更快地掌握你的文章，隨心所欲的跳到他想看到的部份。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Table Of Contents in the Sidebar</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: true</span><br><span class="line"></span><br><span class="line">  # If true, all words will placed on next lines if header width longer then sidebar width.</span><br><span class="line">  wrap: false</span><br></pre></td></tr></table></figure>
+<p><code>number</code>指的是左邊的數字，<code>wrap</code>指的是若段落標題太長是否可以斷行，true指的是完整呈現，false就是會省略第二行之後的文字。</p>
+<p>同樣的，若你的文章不想要有TOC，你可以在文章的頭，設定<code>toc: false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: title</span><br><span class="line">date: 2017-12-31 00:00:00</span><br><span class="line">toc: false</span><br></pre></td></tr></table></figure>
+<p>ps:這裡要跟各位提醒一點，由於我安裝的時候為<code>v3.4.3</code>版本，TOC在html連結的部分template有些bug，後來在<code>v3.4.4</code>修正過來，若你有遇到<code>&lt;a&gt;&lt;/a&gt;</code>只包在序號的問題，請使用下面指令升級Hexo。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update hexo</span><br></pre></td></tr></table></figure></p>
+<h3 id="增加頁面"><a href="#增加頁面" class="headerlink" title="增加頁面"></a>增加頁面</h3><p>Hexo除了可以增加新文章外，也可以增加新頁面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;postName&quot; 		# 產生新的文章</span><br><span class="line">$ hexo new page &quot;pageName&quot;	# 產生新的頁面</span><br></pre></td></tr></table></figure></p>
+<p>讀者可以看到左側欄Menu的About，這就是用new page指令的範例。<br>當你產生新文章時，<code>source/_posts</code>資料夾就會產生一個<code>postName.md</code>檔案；但若是產生新的頁面，則會產生在<code>source</code>資料夾底下產生<code>pageName/index.md</code>，這個頁面的網址就會是<code>yourSiteURL/pageName</code>。</p>
+<p>這時候你想把About頁面加入<code>Menu</code>裡的話，請在<code>/themes/next/_config.yml</code>找到menu的配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  about: /about</span><br></pre></td></tr></table></figure></p>
+<h3 id="增加Categories"><a href="#增加Categories" class="headerlink" title="增加Categories"></a>增加Categories</h3><p>其實跟增加About的做法大同小異，只是要在文章頭加上一個屬性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: Categories</span><br><span class="line">date: 2017-12-31 00:00:00</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
+<p>之後你就可以在你所撰寫的post中，加上<code>categories</code>，這對分類文章非常有幫助，也能讓讀者更能知道你寫了哪些類型的文章。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 用 HEXO 打造網誌教學(1) - 建置環境</span><br><span class="line">date: 2017-12-27 21:30:38</span><br><span class="line">categories: HEXO</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h3 id="增加Tags"><a href="#增加Tags" class="headerlink" title="增加Tags"></a>增加Tags</h3><p>其實跟上面兩種真的差別不大。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: Tags</span><br><span class="line">date: 2017-12-31 00:00:00</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
+<p>之後你就可以在你所撰寫的post中，加上<code>tags</code>，這同時也會增加html的<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"Hexo,前端,NodeJS,Github,"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 用 HEXO 打造網誌教學(1) - 建置環境</span><br><span class="line">date: 2017-12-27 21:30:38</span><br><span class="line">tags: [Hexo, 前端, NodeJS, Github] #單個不用加[]，多個用陣列呈現。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="RSS-Feed"><a href="#RSS-Feed" class="headerlink" title="RSS Feed"></a>RSS Feed</h3><p>hexo有套件自動生產RSS Feed，讓你能夠被RSS訂閱。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></p>
+<p>之後再<code>/_config.yml</code>，根目錄底下的網站設定文件的最後新增以下的選項即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br></pre></td></tr></table></figure></p>
+<p>你可以看到<code>/themes/next/_config.yml</code>也有rss的選項：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Set rss to false to disable feed link.</span><br><span class="line"># Leave rss as empty to use site&apos;s feed link.</span><br><span class="line"># Set rss to specific value if you have burned your feed already.</span><br><span class="line">rss:</span><br></pre></td></tr></table></figure></p>
+<p>預設就是空的，就不要再加，除非你不想要rss feed，那就寫<code>false</code>，它會抓你網站設定的rss。</p>
+<h3 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h3><p>同樣的，也有套件自動生產sitemap，增加你的SEO，讓爬蟲可以快一點把你的網站抓回去, 加入的方法也很簡單<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></p>
+<p>之後再<code>/_config.yml</code>，根目錄底下的網站設定文件的最後新增以下的選項即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure></p>
+<h3 id="Google-Analysis"><a href="#Google-Analysis" class="headerlink" title="Google Analysis"></a>Google Analysis</h3><p>如果這是你的第一個站台，誠心推薦申辦<a href="https://analytics.google.com/analytics/web" target="_blank" rel="noopener">Google Analytics</a>，這可以讓你練習使用GA(現代職場必學)，也能讓你知道你的網誌到底有沒有人在看，哪裡需要改善，超級簡單又好上手。<br>請在<code>/themes/next/_config.yml</code>裡面做下列設定：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Google Analytics</span><br><span class="line">google_analytics: GA ID</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a><br><a href="http://stylus-lang.com/" target="_blank" rel="noopener">stylus</a><br><a href="http://fancyapps.com/fancybox/" target="_blank" rel="noopener">fancybox v2</a><br><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81%E5%9B%BE%E7%89%87" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br><a href="https://www.jianshu.com/p/c4f65ebe23ad" target="_blank" rel="noopener">为 Hexo 博客加入 Disqus 评论</a></p>
+<hr>
+<p>HEXO的教學就到這裡告一段落，若我還有找到什麼有趣的東西會再更新上來跟大家分享，謝謝你耐心閱讀啦！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/tags/NodeJS/" rel="tag"># NodeJS</a>
+          
+            <a href="/tags/NexT/" rel="tag"># NexT</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/20171227/hexo01/" rel="next" title="用 HEXO 打造網誌教學(1) - 建置環境">
+                <i class="fa fa-chevron-left"></i> 用 HEXO 打造網誌教學(1) - 建置環境
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Willy Li" />
+            
+              <p class="site-author-name" itemprop="name">Willy Li</p>
+              <p class="site-description motion-element" itemprop="description">#學習筆記 #工作經歷 #前端技術</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/WillyLi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:wanttobe0618@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://codepen.io/wanttobe/" target="_blank" title="Codepen">
+                    
+                      <i class="fa fa-fw fa-codepen"></i>Codepen</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/cv.pdf" target="_blank" title="resume">
+                    
+                      <i class="fa fa-fw fa-file-pdf-o"></i>resume</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#網站配置"><span class="nav-number">1.</span> <span class="nav-text">網站配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基礎設定"><span class="nav-number">1.1.</span> <span class="nav-text">基礎設定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝主題-NexT"><span class="nav-number">2.</span> <span class="nav-text">安裝主題(NexT)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本安裝"><span class="nav-number">2.1.</span> <span class="nav-text">基本安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#選擇Scheme"><span class="nav-number">2.2.</span> <span class="nav-text">選擇Scheme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加個人資料"><span class="nav-number">2.3.</span> <span class="nav-text">增加個人資料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#大頭貼-avatar"><span class="nav-number">2.3.1.</span> <span class="nav-text">大頭貼 avatar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Social-Media-Link"><span class="nav-number">2.3.2.</span> <span class="nav-text">Social Media Link</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首頁摘要-auto-excerpt"><span class="nav-number">2.4.</span> <span class="nav-text">首頁摘要 auto_excerpt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自訂css"><span class="nav-number">2.5.</span> <span class="nav-text">自訂css</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入其他功能"><span class="nav-number">3.</span> <span class="nav-text">加入其他功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#留言-DISQUS"><span class="nav-number">3.1.</span> <span class="nav-text">留言(DISQUS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TOC-Table-Of-Contents"><span class="nav-number">3.2.</span> <span class="nav-text">TOC (Table Of Contents)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加頁面"><span class="nav-number">3.3.</span> <span class="nav-text">增加頁面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加Categories"><span class="nav-number">3.4.</span> <span class="nav-text">增加Categories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加Tags"><span class="nav-number">3.5.</span> <span class="nav-text">增加Tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSS-Feed"><span class="nav-number">3.6.</span> <span class="nav-text">RSS Feed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sitemap"><span class="nav-number">3.7.</span> <span class="nav-text">sitemap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Analysis"><span class="nav-number">3.8.</span> <span class="nav-text">Google Analysis</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Willy Li</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-willyli-github-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://willyli.github.io/20180102/hexo02/';
+          this.page.identifier = '20180102/hexo02/';
+          this.page.title = '用 HEXO 打造網誌教學(2) - 主題配置';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-willyli-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

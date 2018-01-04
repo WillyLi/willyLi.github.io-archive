@@ -271,6 +271,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://willyli.github.io/20180102/hexo02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Willy Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Willy's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/20180102/hexo02/" itemprop="url">用 HEXO 打造網誌教學(2) - 主題配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-02T23:41:12+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HEXO/" itemprop="url" rel="index">
+                    <span itemprop="name">HEXO</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/20180102/hexo02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="20180102/hexo02/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+      
+      
+      
+        
+          <p><img src="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png" alt="HEXO"></p>
+<p>本文在討論Hexo的主題配置，並使用本站選用的NexT當作範例，還包含不少擴充功能，如評論功能、TOC功能、sitemap、google analysis等等，也會教你如何去微調一些layout，讓你的Hexo部落格錦上添花。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20180102/hexo02/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://willyli.github.io/20171227/hexo01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -290,7 +446,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/20171227/hexo01/" itemprop="url">用 HEXO 打造網誌(1) - 建置環境</a></h1>
+                <a class="post-title-link" href="/20171227/hexo01/" itemprop="url">用 HEXO 打造網誌教學(1) - 建置環境</a></h1>
         
 
         <div class="post-meta">
@@ -368,57 +524,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
       
       
-
       
         
-          
-            <p><img src="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png" alt="HEXO"></p>
-<h1><span id="前言">前言</span></h1><p>市面上有許多免費部落格，ex: <a href="https://www.blogger.com/" target="_blank" rel="noopener">blogger</a>、<a href="https://www.pixnet.net/blog" target="_blank" rel="noopener">痞客邦</a>、<a href="http://blog.xuite.net/" target="_blank" rel="noopener">隨意窩日誌Xuite</a>，但總歸一句就不是自己的站台。但為了撰寫部落格而架設資料庫與後台系統，似乎又殺雞焉用牛刀，這種做法的平台可參考<a href="https://zh-tw.wordpress.com/learn-more/?v=blog" target="_blank" rel="noopener">WordPress</a>、<a href="https://www.wix.com" target="_blank" rel="noopener">Wix</a>、<a href="https://www.weebly.com/?lang=zh_TW" target="_blank" rel="noopener">Weebly</a>。</p>
-<p>部落格基本上都是靜態HTML，因此許多開發者便利用後端語法開發了blog framework，簡易了製作部落格產生靜態網頁(static page)的流程，優點為環境要求低、維護簡單、靈活多變，基本上使用起來就像是gulp/webpack等前端自動化工具，使用markdown語法撰寫網誌編排容易，跟傳統html編輯器比較起來簡潔，較為知名的框架如下：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>語言</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hexo</td>
-<td>NodeJS</td>
-</tr>
-<tr>
-<td>Jekyll</td>
-<td>Ruby</td>
-</tr>
-<tr>
-<td>OctoPress</td>
-<td>Ruby</td>
-</tr>
-<tr>
-<td>Sculpin</td>
-<td>PHP</td>
-</tr>
-<tr>
-<td>Hugo</td>
-<td>GO</td>
-</tr>
-</tbody>
-</table>
-<p>為何選用HEXO，第一是NodeJS，對javascript掌握度比較高，第二是因為檔案建立速度比較快，(相較於ruby語法)，最後是因為，HEXO是台灣人寫的，文件都有中文，非常的友善呀！(<a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="noopener">HEXO作者的自我推薦</a>)</p>
-<hr>
-<h1><span id="step1-建置環境">STEP1 - 建置環境</span></h1><blockquote class="blockquote-center">blah blah blah</blockquote>
-
-<hr>
-<h1><span id="step2-github配置">STEP2 - Github配置</span></h1><hr>
-<h1><span id="step3-建立第一篇文章">STEP3 - 建立第一篇文章</span></h1><hr>
-<h1><span id="step4-發布到github">STEP4 - 發布到Github</span></h1><hr>
-<h1><span id="常用-hexo-指令">常用 Hexo 指令</span></h1><hr>
-<h1><span id="reference">Reference</span></h1>
-          
+          <p><img src="https://dn-sdkcnssl.qbox.me/article/fW2TdnnVf4dkMlhckU_k.png" alt="HEXO"></p>
+<p>市面上有許多免費部落格，ex: <a href="https://www.blogger.com/" target="_blank" rel="noopener">blogger</a>、<a href="https://www.pixnet.net/blog" target="_blank" rel="noopener">痞客邦</a>、<a href="http://blog.xuite.net/" target="_blank" rel="noopener">隨意窩日誌Xuite</a>，但總歸一句就不是自己的站台。但為了撰寫部落格而架設資料庫與後台系統，似乎又殺雞焉用牛刀，這種做法的平台可參考<a href="https://zh-tw.wordpress.com/learn-more/?v=blog" target="_blank" rel="noopener">WordPress</a>、<a href="https://www.wix.com" target="_blank" rel="noopener">Wix</a>、<a href="https://www.weebly.com/?lang=zh_TW" target="_blank" rel="noopener">Weebly</a>，那除此之外還有什麼樣的選擇呢？<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20171227/hexo01/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -502,7 +620,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -524,7 +642,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -563,7 +681,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="cv.pdf" target="_blank" title="resume">
+                  <a href="/cv.pdf" target="_blank" title="resume">
                     
                       <i class="fa fa-fw fa-file-pdf-o"></i>resume</a>
                 </span>
@@ -596,7 +714,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
