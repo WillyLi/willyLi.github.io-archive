@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://willyli.github.io/about/index.html</loc>
+    
+    <lastmod>2018-01-05T06:35:27.514Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://willyli.github.io/20180102/hexo02/</loc>
     
     <lastmod>2018-01-04T16:34:43.985Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://willyli.github.io/20171227/hexo01/</loc>
     
     <lastmod>2018-01-04T11:10:57.066Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://willyli.github.io/about/index.html</loc>
-    
-    <lastmod>2018-01-04T09:46:54.953Z</lastmod>
     
   </url>
   
